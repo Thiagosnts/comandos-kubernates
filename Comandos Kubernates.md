@@ -22,7 +22,7 @@
 `kubectl get service -n <nome-namespace> <service-name> -o yaml`
 
 ###  Limpar todos recursos de um namespace
-`kubectl delete namespace ingress-basic`
+`kubectl delete namespace <nome-namespace>`
 
 ### Executar Comandos dentros do pod
 `kubectl exec <pod-name> -n <nome-namespace> -- curl --location --request GET 'http://localhost/'`
