@@ -33,6 +33,9 @@
 ###  listar ingress de um namespace
 `kubectl get ingress -n gdt-dev`
 
+### Comando para desfazer o deployment
+`kubectl rollout undo deploy my-deployment-name -n my-namespace`
+
 ###  Criar Secret no cluster
 ```
 kubectl create secret tls tls-secret \
