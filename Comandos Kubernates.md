@@ -24,6 +24,24 @@
 ###  Limpar todos recursos de um namespace
 `kubectl delete namespace <nome-namespace>`
 
+###  Carregar certificado ssl
+`kubectl create secret tls tls-secret --key tls.key --cert tls.crt`
+
+###  listar varios recursos namespace
+`kubectl get deploy,pod,rs,svc,ing -n <nome-namespace>`
+
+###  listar ingress de um namespace
+`kubectl get ingress -n gdt-dev`
+
+###  Criar Secret no cluster
+```
+kubectl create secret tls tls-secret \
+    --namespace gdt-prd \
+    --key tls.key \
+    --cert tls.crt
+```
+
+
 ### Executar Comandos dentros do pod
 `kubectl exec <pod-name> -n <nome-namespace> -- curl --location --request GET 'http://localhost/'`
 
