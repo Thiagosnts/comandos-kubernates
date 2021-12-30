@@ -45,6 +45,9 @@
 ### Escalar numero de réplicas
 `kubectl scale deploy <nome-deployment>.yaml -n <nome-namespace> --replicas=1`
 
+### Mostrar detalhes de um ReplicationController
+`kubectl describe replicationcontrollers/<nome-ReplicationController>`
+
 ### Apagar Namespace travado
 ```
 kubectl get namespace <nome-namespace> -o json > dados.json
