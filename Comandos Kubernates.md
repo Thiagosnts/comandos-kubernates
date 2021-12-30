@@ -33,8 +33,24 @@
 ###  listar ingress de um namespace
 `kubectl get ingress -n gdt-dev`
 
-### Comando para desfazer o deployment
+### Mostra historico de deployments
+`kubectl rollout history deployment/<nome-deployment> -n gdt-dev`
+
+### Fazer rollback para a versão anterior
 `kubectl rollout undo deploy my-deployment-name -n my-namespace`
+
+### Fazer rollback para um versão especifica
+`kubectl rollout undo deployment/<nome-deployment> -n <nome-namespace> --to-revision=12`
+
+### Escalar numero de réplicas
+`kubectl scale deploy <nome-deployment>.yaml -n <nome-namespace> --replicas=1`
+
+### Apagar Namespace travado
+```
+kubectl get namespace <nome-namespace> -o json > dados.json
+nano dados.json
+kubectl replace --raw "/api/v1/namespaces/<nome-namespace>/finalize" -f ./dados.json
+```
 
 ###  Criar Secret no cluster
 ```
