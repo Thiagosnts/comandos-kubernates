@@ -48,6 +48,9 @@
 ### Mostrar detalhes de um ReplicationController
 `kubectl describe replicationcontrollers/<nome-ReplicationController>`
 
+### Logar no Container Registry
+`az acr login -n <nome-registry>`
+
 ### Apagar Namespace travado
 ```
 kubectl get namespace <nome-namespace> -o json > dados.json
