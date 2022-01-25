@@ -70,6 +70,11 @@ kubectl create secret tls tls-secret \
 ### Executar Comandos dentros do pod
 `kubectl exec <pod-name> -n <nome-namespace> -- curl --location --request GET 'http://localhost/'`
 
+
+### Fazer requisição para serviços de outro namespace
+`curl http://<nome-service>.<nome-namespace>:8080/healthcheck`
+
+
 ### Entrar no pod
 **Linux com bash**
 
