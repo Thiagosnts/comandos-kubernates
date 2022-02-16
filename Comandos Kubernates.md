@@ -57,6 +57,10 @@ kubectl get namespace <nome-namespace> -o json > dados.json
 nano dados.json
 kubectl replace --raw "/api/v1/namespaces/<nome-namespace>/finalize" -f ./dados.json
 ```
+### Apagar pod travado
+```
+kubectl delete --wait=false pod <pod-name> -n <nome-namespace>
+```
 
 ###  Criar Secret no cluster
 ```
