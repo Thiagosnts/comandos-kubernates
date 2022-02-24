@@ -79,6 +79,14 @@ kubectl create secret tls tls-secret \
 `curl http://<nome-service>.<nome-namespace>:8080/healthcheck`
 
 
+### Copiar arquivo do Pod
+`kubectl cp <nome-namespace>/<nome-pod>:<caminho-arquivo> <destino-local>`
+
+
+### Copiar arquivo para o Pod
+`kubectl cp <caminho-arquivo-local> <nome-namespace>/<nome-pod>:<caminho-arquivo>`
+
+
 ### Entrar no pod
 **Linux com bash**
 
